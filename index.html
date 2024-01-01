@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <!-- <div class="book-card">
+        <p class="title">Book Title</p>
+        <p class="author">Author</p>
+        <p class="pages">256 pages</p>
+        <p class="read">book has been read</p>
+    </div> -->
+
+    <div class="book-cards">
+        
+    </div>
+
+    <div class="new-book">
+        <button class="new-book-btn">New Book</button>
+
+        <form class="new-book-form" action="#" method="get">
+            <fieldset>
+                <div class="form-field">
+                    <label for="book_title">Book Title</label>
+                    <input type="text" name="book_title" id="book_title" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="book_author">Author</label>
+                    <input type="text" name="book_author" id="book_author" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="book_pages">Pages (total)</label>
+                    <input type="text" name="book_pages" id="book_pages" required>
+                </div>
+            </fieldset>
+
+            <fieldset class="book-read">
+                <!-- <label for="book_read">Have you read this book?</label> -->
+                <legend>Have you read this book?</legend>
+
+                <label for="Yes">Yes</label>
+                <input type="radio" name="book_read" id="Yes" value="Yes">
+
+                <label for="No">No</label>
+                <input type="radio" name="book_read" id="No" value="No">
+            </fieldset>
+
+            <button type="button" onclick="addBookToLibrary()">Add +</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.book-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background-color: rgb(225, 225, 225);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 16rem;
+    min-height: 10rem;
+    margin: 1rem;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.remove-book-button {
+    width: 2.5rem;
+    background: none;
+    border: none;
+    align-self: end;
+    /* margin-right: 1rem;
+    margin-bottom: 1rem; */
+}
+
+.remove-book-button:hover {
+    cursor: pointer;
+}
+
+.new-book > button {
+    display: flex;
+    border: none;
+    border-radius: 16px;
+    background-color: dodgerblue;
+    color: white;
+    padding: 1rem 4rem;
+    margin: 0 auto;
+    /* font-size: 1rem; */
+}
+
+.new-book > button:hover {
+    cursor: pointer;
+}
+
+.new-book > button:active {
+    background-color: rgb(10, 130, 249);
+}
+
+.new-book-form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    width: 19rem;
+    margin: 1rem 0;
+    /* border: 1px red solid; */
+}
+
+.book-read {
+    /* border: 1px red solid; */
+    /* display: flex;
+    justify-content: center; */
+    width: 19rem;
+}
+
+.book-read > input {
+    margin: 0.5rem 2rem 0 0;
+}
+
+.new-book-form > button {
+    /* display: flex; */
+    /* border: none; */
+    /* border-radius: 16px; */
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 1rem 1rem;
+    margin-top: 1rem;
+    /* margin: 0 auto; */
+    /* font-size: 1rem; */
+}
