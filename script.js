@@ -53,6 +53,14 @@ function addBookToLibrary() {
 
     displayLibrary();
     // console.log(myLibrary);
+
+    // clear form
+    document.getElementsByName('book_title')[0].value = '';
+    document.getElementsByName('book_author')[0].value = '';
+    document.getElementsByName('book_pages')[0].value = '';
+    for (let i = 0; i < radioButtons.length; i++) {
+        radioButtons[i].checked = false;
+    }
 }
 
 const bookCardsDiv = document.querySelector('.book-cards');
