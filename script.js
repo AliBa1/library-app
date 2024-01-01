@@ -103,17 +103,52 @@ function displayLibrary() {
             read.textContent = 'You have not read this book';
         }
 
+        // const removeBookBtn = document.createElement('button');
+        // const removeBookImg = document.createElement("img");
+        // removeBookImg.src = "images/book-remove.svg";
+        // removeBookImg.alt = "Remove Book";
+        // removeBookBtn.appendChild(removeBookImg);
+        // removeBookBtn.classList.add('remove-book-button');
+        // bookCard.appendChild(removeBookBtn);
+        // removeBookBtn.onclick = function() {
+        //     removeBook(book.index);
+        // };
+        const bookActionsDiv = document.createElement('div');
+        bookActionsDiv.classList.add('book-actions');
+        bookCard.appendChild(bookActionsDiv);
+
+        const readBookButton = document.createElement('button');
+        const readBookImg = document.createElement("img");
+        readBookImg.src = "images/read.svg";
+        readBookImg.alt = "Read Book";
+        readBookButton.appendChild(readBookImg);
+        readBookButton.classList.add('read-book-button');
+        bookActionsDiv.appendChild(readBookButton);
+        readBookButton.onclick = function() {
+            changeBookRead(book.index);
+        };
+
         const removeBookBtn = document.createElement('button');
         const removeBookImg = document.createElement("img");
         removeBookImg.src = "images/book-remove.svg";
         removeBookImg.alt = "Remove Book";
         removeBookBtn.appendChild(removeBookImg);
         removeBookBtn.classList.add('remove-book-button');
-        bookCard.appendChild(removeBookBtn);
+        // bookCard.appendChild(removeBookBtn);
+        bookActionsDiv.appendChild(removeBookBtn);
         removeBookBtn.onclick = function() {
             removeBook(book.index);
         };
+
+        
     });
+}
+
+function changeBookRead(index) {
+    myLibrary[index].read = !myLibrary[index].read;
+
+    displayLibrary();
+    console.log(myLibrary);
 }
 
 function removeBook(index) {
@@ -124,6 +159,8 @@ function removeBook(index) {
     displayLibrary();
     console.log(myLibrary);
 }
+
+
 
 displayLibrary();
 console.log(myLibrary);

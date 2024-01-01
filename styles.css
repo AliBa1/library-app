@@ -30,16 +30,21 @@ body {
     font-weight: bold;
 }
 
-.remove-book-button {
+.book-actions {
+    display: flex;
+    align-self: end;
+}
+
+.remove-book-button, .read-book-button {
     width: 2.5rem;
     background: none;
     border: none;
-    align-self: end;
+    /* align-self: end; */
     /* margin-right: 1rem;
     margin-bottom: 1rem; */
 }
 
-.remove-book-button:hover {
+.remove-book-button:hover, .read-book-button:hover {
     cursor: pointer;
 }
 
