@@ -1,21 +1,25 @@
 const myLibrary = [];
 
-// test library
-let book1 = new Book('Book 1', 'Sam Howell', 81, true);
-let book2 = new Book('My Favorite Book 2', 'Underdog', 1032, false);
-// myLibrary.push(book1);
-// myLibrary.push(book2);
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.index;
+        this.pushToLibrary();
+        this.assignIndex();
+    }
 
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+    pushToLibrary() {
+        myLibrary.push(this);
+    }
 
-    myLibrary.push(this);
-    this.index = myLibrary.length - 1;
+    assignIndex() {
+        this.index = myLibrary.length - 1;
+    }
 
-    this.info = function() {
+    info() {
         if (read == true) {
             return '${this.title} by ${this.author}, ${this.pages} pages, you read this book';
         } else {
@@ -24,6 +28,12 @@ function Book(title, author, pages, read) {
         // return (this.title + ' by ' + this.author + ', ' + this.pages + ' pages, ' + this.read);  
     };
 }
+
+// test library
+let book1 = new Book('Book 1', 'Sam Howell', 81, true);
+let book2 = new Book('My Favorite Book 2', 'Underdog', 1032, false);
+// myLibrary.push(book1);
+// myLibrary.push(book2);
 
 function addBookToLibrary() {
     let newBookTitle = document.getElementsByName('book_title')[0].value;
